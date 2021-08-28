@@ -1,0 +1,21 @@
+.footer {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.powered-by {
+  background-color: #024bac;
+  min-width: fit-content;
+  display: flex;
+  padding: 0.5rem;
+}
+
+.powered-by__text {
+  font-weight: lighter;
+}
+.sm-logo {
+  height: 20px;
+}

@@ -1,0 +1,65 @@
+.accordion {
+  /* background-color: #eee; */
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  /* background-color: #ccc; */
+}
+
+.accordion:after {
+  content: url("../../images/caret_down.svg");
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: url("../../images/caret_up.svg");
+}
+
+.panel {
+  padding: 0 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel__heading {
+  color: #606060;
+  /* padding: 0.4rem 0; */
+}
+
+.floof-list {
+  padding: 1rem 1rem 0.4rem 1rem;
+  list-style-image: url("../../images/check.svg");
+}
+.floof-list__item {
+  padding: 0.4rem 0;
+}
+
+.btn__more-info {
+  align-self: flex-end;
+  margin-bottom: 1rem;
+  background: #0055ba;
+  border-radius: 8.50467px;
+  padding: 1rem;
+  color: #fff;
+  border: 0;
+}
+.banks__content {
+  border-bottom: 1px solid #fff;
+}

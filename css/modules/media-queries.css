@@ -1,0 +1,27 @@
+@media only screen and (min-width: 600px) {
+  body {
+    padding: 2rem 5rem;
+  }
+  .lead {
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+  }
+  .lead__text {
+    font-size: 3rem;
+    text-align: left;
+    flex: 1.5;
+    padding-right: 1rem;
+    margin-top: 5rem;
+  }
+  .lead__right {
+    flex: 1;
+  }
+  .lead__right {
+    margin-right: 4rem;
+  }
+
+  .banks {
+    max-height: 50vh;
+  }
+}

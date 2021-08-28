@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.statement__info {
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statement__info__arrow {
+  height: 0.6rem;
+  margin-left: 0.4rem;
+}
