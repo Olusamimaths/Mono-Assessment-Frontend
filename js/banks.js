@@ -1,3 +1,47 @@
+function handlePanel(panel) {
+  if (panel && panel.style.maxHeight) {
+    panel.innerHTML = null;
+    panel.style.maxHeight = null;
+  } else {
+    panel.innerHTML = `
+          <h4 class="panel__heading">
+              Floof will be able to access your:
+          </h4>
+          <ul class="floof-list">
+              <li class="floof-list__item">Account holder name</li>
+              <li class="floof-list__item">Account type</li>
+              <li class="floof-list__item">Account transaction history</li>
+              <li class="floof-list__item">Account balance</li>
+          </ul>
+          <button class="btn__more-info" id="btn_moreInfo">More info</button>
+        `;
+    panel.style.maxHeight = panel.scrollHeight + "px";
+  }
+}
+
+function togglePopup(popup, clientY) {
+  if (popup.style.visibility == "hidden") {
+    popup.style.bottom = window.innerHeight - clientY + 30 + "px";
+    popup.style.visibility = "visible";
+  } else {
+    popup.style.visibility = "hidden";
+  }
+}
+
+function handlePopUp() {
+  const btnInfo = document.getElementById("btn_moreInfo");
+  if (btnInfo) {
+    btnInfo.addEventListener("click", function (event) {
+      const clientY = event.clientY;
+      const popup = document.getElementById("popup");
+      togglePopup(popup, clientY);
+      setTimeout(() => {
+        popup.style.visibility = "hidden";
+      }, 4000);
+    });
+  }
+}
+
 function mountAccordions() {
   const accordions = document.getElementsByClassName("accordion");
 
@@ -5,11 +49,9 @@ function mountAccordions() {
     accordions[i].addEventListener("click", function () {
       this.classList.toggle("active");
       const panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
+
+      handlePanel(panel);
+      handlePopUp();
 
       for (let j = 0; j < accordions.length; j++) {
         const currentAccordion = accordions[j];
@@ -44,16 +86,7 @@ function createContent(res) {
                     </div>
                 </div>
                 <div class="panel">
-                    <h4 class="panel__heading">
-                        Floof will be able to access your:
-                    </h4>
-                    <ul class="floof-list">
-                        <li class="floof-list__item">Account holder name</li>
-                        <li class="floof-list__item">Account type</li>
-                        <li class="floof-list__item">Account transaction history</li>
-                        <li class="floof-list__item">Account balance</li>
-                    </ul>
-                    <button class="btn__more-info">More info</button>
+                    
                 </div>
             </div>
         `;
