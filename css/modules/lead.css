@@ -69,11 +69,11 @@
 
 .banks::-webkit-scrollbar {
   width: 5px;
-  height: 50%;
 }
 
 /* Handle */
 .banks::-webkit-scrollbar-thumb {
   background: #fff;
   border-radius: 10px;
+  height: 150px;
 }
