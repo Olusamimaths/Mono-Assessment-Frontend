@@ -1,3 +1,5 @@
+const API_URL = "https://mono-backend-olusola.herokuapp.com/banks";
+
 function handlePanel(panel) {
   if (panel && panel.style.maxHeight) {
     panel.innerHTML = null;
@@ -125,18 +127,21 @@ function search(url, bankName) {
     });
 }
 
+// Handle search text input
+let timeout = null;
 searchBox.addEventListener("keyup", function (event) {
+  clearTimeout(timeout);
   event.preventDefault();
   const searchText = document.getElementById("searchBox").value;
   if (searchText != "") {
-    setTimeout(() => {
-      search("http://localhost:3000/banks", searchText);
-    }, 700);
+    timeout = setTimeout(() => {
+      search(API_URL, searchText);
+    }, 1000);
   } else {
-    getBankLists("http://localhost:3000/banks");
+    getBankLists(API_URL);
   }
 });
 
 window.onload = () => {
-  getBankLists("http://localhost:3000/banks");
+  getBankLists(API_URL);
 };
