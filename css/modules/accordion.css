@@ -53,37 +53,3 @@
 .floof-list__item {
   padding: 0.4rem 0;
 }
-
-.btn__more-info {
-  align-self: flex-end;
-  margin-bottom: 1rem;
-  background: #0055ba;
-  border-radius: 8.50467px;
-  padding: 1rem;
-  color: #fff;
-  border: 0;
-  cursor: pointer;
-}
-.banks__content {
-  border-bottom: 1px solid #fff;
-}
-
-.banks__content section {
-  flex: 1;
-}
-
-.bank-logo {
-  height: 45px;
-  width: 60px;
-  margin-right: 1rem;
-  border-radius: 50%;
-}
-
-.banks_content__logo-name {
-  display: flex;
-  align-items: center;
-}
-
-.banks_content__bank-name {
-  font-size: 1.2rem;
-}

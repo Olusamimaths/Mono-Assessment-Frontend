@@ -77,3 +77,68 @@
   border-radius: 10px;
   height: 150px;
 }
+
+.btn__more-info {
+  align-self: flex-end;
+  margin-bottom: 1rem;
+  background: #0055ba;
+  border-radius: 8.50467px;
+  padding: 1rem;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+}
+.banks__content {
+  border-bottom: 1px solid #fff;
+}
+
+.banks__content section {
+  flex: 1;
+}
+
+.bank-logo {
+  height: 45px;
+  width: 60px;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+
+.banks_content__logo-name {
+  display: flex;
+  align-items: center;
+}
+
+.banks_content__bank-name {
+  font-size: 1.2rem;
+}
+
+.pop-up {
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  padding: 1rem;
+  max-width: 80%;
+  right: 20px;
+  z-index: 100;
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  visibility: hidden;
+}
+
+.pop-up p {
+  margin: 1rem 0;
+}
+
+/* Popup arrow */
+.pop-up::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 10%;
+  margin-left: -5px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
